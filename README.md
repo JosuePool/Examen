@@ -24,33 +24,33 @@ Ahora describi los datos usando el comando
 ahora para poder identificar la media primero ingresamos el nombre de la variable.  y junto el comando
 
 *Media = df["duration_ms"].mean()
-*Media ---(Imprimire la media)-----
+Media ---(Imprimire la media)-----
 
 
 
 Luego para poder identificar la mediana primero ingresamos el nombre de la variable.  y junto el comando
 
 *Mediana = df["duration_ms"].median()
-*Mediana ---(Imprimire la mediana)-----
+Mediana ---(Imprimire la mediana)-----
 
 
 Luego  identificamos la varianza primero ingresamos el nombre de la variable.  y junto el comando
 
 *Varianza = df["duration_ms"].var()
-*Varianza ---(Imprimire el minimo)-----
+Varianza ---(Imprimire el minimo)-----
 
 
 Despues identificamos el maximo primero ingresamos el nombre de la variable.  y junto el comando
 
 
 *Maximo = df["duration_ms"].max()
-*Maximo ---(Imprimire el Maximo)-----
+Maximo ---(Imprimire el Maximo)-----
 
 
 
 Luego identificamos el minimo primero ingresamos el nombre de la variable.  y junto el comand
 
 *Minimo = df["duration_ms"].min()
-*Minimo ---(Imprimire el minimo)-----
+Minimo ---(Imprimire el minimo)-----
 
 
