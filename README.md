@@ -1,56 +1,49 @@
 # Examen
-Primero lo que tuve que hacer es importar el panda
+Primero lo que tuve que hacer es importar los reporsitorios
 
-*Impor pandas as pd
+import pandas as pd
+import matplotlib.pyplot as plt
+%matplotlib inline
+import numpy as np
+import numpy as np 
+import seaborn as sns 
+from matplotlib import pyplot as plt 
+%matplotlib inline
 
 Luego lo que haremos es definir nuestras variables,para abrir nuestro archivo directamente en un DataFrame utlizaremos el comando pd.read_csv, junto unos parentecis que llevara unas comillas dobles que donde sera para indicar nuestra ruta del archivo finalemeto con la extencion .csv
 
-*df=pd.read_csv("Music/data_by_artist.csv')
-
-Luego lo que hice fue ver la informacion que se tiene para eso ingrese el comando
-
-*df.info
-
-Depues ingrese la parte de los 10 primeros artistas. ingresando el comando 
-
-*df.head(10)
-
-Ahora describi los datos usando el comando 
-
-*df.describe()
-
-*df.artist.count()
-
-ahora para poder identificar la media primero ingresamos el nombre de la variable.  y junto el comando
-
-*Media = df["duration_ms"].mean()
-Media ---(Imprimire la media)-----
+bd = pd.read_csv("data.csv")
 
 
+Depues ingrese la parte de los 10 primeros artistas. ingresando los comandos 
 
-Luego para poder identificar la mediana primero ingresamos el nombre de la variable.  y junto el comando
+df = df.head(10).sort_values(by='artists', ascending=True)
 
-*Mediana = df["duration_ms"].median()
-Mediana ---(Imprimire la mediana)-----
+df['artists']
+
+Ahora describi los posibles datos que se relaciones ingresando el comando 
+
+df---------- para que muestre la tabla
+
+Luego
+relacion = df[['artists','danceability','duration_ms','energy']] donde se tomaran las relaciones
+
+y aqui el comando -----relacion.head(10) mostrara 10 datos de cada columna donde veremos las relaciones.
+
+Conforme con las variables lo que haremos es sacar la Media, Promedio, valor máximo, valor mínimo
+para eso ingresamos el comando
+
+*relacion.describe()
+y luego el comando 
+*relacion.describe()
+
+luego procemos con la varianza para eso ingresamos el comando 
+var = df.var()
+print(var) Que imprimira los resultados
 
 
-Luego  identificamos la varianza primero ingresamos el nombre de la variable.  y junto el comando
+por ultimo veremos Cuáles valores pueden tener una relación lineal positiva 
+para esto lo que haremos es ingresar el comando
+*sns.pairplot(relacion, kind ='reg') y nos mostrara unas graficas
 
-*Varianza = df["duration_ms"].var()
-Varianza ---(Imprimire el minimo)-----
-
-
-Despues identificamos el maximo primero ingresamos el nombre de la variable.  y junto el comando
-
-
-*Maximo = df["duration_ms"].max()
-Maximo ---(Imprimire el Maximo)-----
-
-
-
-Luego identificamos el minimo primero ingresamos el nombre de la variable.  y junto el comand
-
-*Minimo = df["duration_ms"].min()
-Minimo ---(Imprimire el minimo)-----
-
-
+ahora cuales fueron esas relaciones?En este caso Seria la de duration_ms y la de energy, debido a que podemos observar el comportamiento de la grafica y notar el movimiento creciente más distintivo en ellas
