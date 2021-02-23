@@ -46,4 +46,4 @@ por ultimo veremos Cuáles valores pueden tener una relación lineal positiva
 para esto lo que haremos es ingresar el comando
 *sns.pairplot(relacion, kind ='reg') y nos mostrara unas graficas
 
-ahora cuales fueron esas relaciones?En este caso Seria la de duration_ms y la de energy, debido a que podemos observar el comportamiento de la grafica y notar el movimiento creciente más distintivo en ellas
+ahora cuales fueron esas relaciones?Se tiene relacion con la bailabilidad,diration y energy, pieso que es posible ya que se mueven por una misma direccion,teniendo como relacion la dependecia de una de otra y investigue  que la relacion literal positiva es la que va de aumento o disminuye simultaneamente a un ritmo constante.
